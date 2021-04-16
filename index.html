@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Oh Yeah Countdown</title>
+	<meta name="description" content="Super simple Countdown + Oh Yeah theme song + simple edit in place notes to engage your audience!">
+	<link rel="stylesheet" href="https://unpkg.com/modesto@latest/modesto.min.css">
+	<style>
+		body {
+			margin:0px;
+			padding:0px;
+			overflow:hidden;
+		}
+		#timer {
+			overflow:hidden;
+			overflow-x:hidden;
+			overflow-y:hidden;
+			height:100%;
+			width:80%;
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+		}
+		.extra {
+			position:absolute;
+			width: 20%;
+			height: 100%;
+			left: 80%;
+			top: 0;
+			background-color: #FFF;
+		}
+		.extra audio {
+			width: 100%;
+			margin:0;
+		}
+		#notes {
+			margin: 0 .3em;
+			padding: 0 .3em;
+			font-size: .8em;
+			background-color: #EFEFEF;
+		}
+	</style>
+
+	<link rel="preload" as="audio" href="oh-yeah.mp3">
+</head>
+
+<body>
+	<iframe src="https://www.bigtimer.net/?minutes=3&seconds=8&repeat=false" frameborder="0" height="100%" width="80%" id="timer"></iframe>
+
+	<div class="extra">
+		<audio controls preload="auto">
+			<source src="oh-yeah.mp3" type="audio/mpeg">
+				<a href="oh-yeah.mp3">oh-yeah.mp3</a>
+			</audio>
+
+			<div id="notes" contentEditable="true">
+				<p>
+					Your local notes...
+				</p>
+			</div>
+	</div>
+
+	<script type="text/javascript">
+		function checkEdits() {
+			if(localStorage.userNotes!=null) {
+				document.getElementById('notes').innerHTML = localStorage.userNotes;
+			}
+		};
+
+		document.onkeyup = function (e) {
+			e = e || window.event;
+			saveEdits();
+		};
+
+		function saveEdits() {
+			var editNotes = document.getElementById('notes');
+			localStorage.userNotes = editNotes.innerHTML;
+		};
+
+		function onLoad() {
+			checkEdits();
+		};
+
+		window.addEventListener('load', onLoad);
+	</script>
+</body>
+</html>
