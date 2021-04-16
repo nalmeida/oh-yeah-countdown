@@ -42,6 +42,12 @@
 			font-size: .8em;
 			background-color: #EFEFEF;
 		}
+		.footer {
+			position: absolute;
+			bottom: 0;
+			font-size: .5em;
+			padding: .3em;
+		}
 	</style>
 
 	<link rel="preload" as="audio" href="oh-yeah.mp3">
@@ -52,15 +58,19 @@
 
 	<div class="extra">
 		<audio controls preload="auto">
-			<source src="oh-yeah.mp3" type="audio/mpeg">
-				<a href="oh-yeah.mp3">oh-yeah.mp3</a>
-			</audio>
+		<source src="oh-yeah.mp3" type="audio/mpeg">
+			<a href="oh-yeah.mp3">oh-yeah.mp3</a>
+		</audio>
 
-			<div id="notes" contentEditable="true">
-				<p>
-					Your local notes...
-				</p>
-			</div>
+		<div id="notes" contentEditable="true">
+			<p>
+				Your local notes...
+			</p>
+		</div>
+		<div class="footer">
+			<img src="https://camo.githubusercontent.com/4133dc1cd4511d4a292b84ce10e52e4ed92569fb2a8165381c9c47be5edc2796/68747470733a2f2f6564656e742e6769746875622e696f2f537570657254696e7949636f6e732f696d616765732f706e672f6769746875622e706e67" width="16" alt="Github icon">
+<a href="https://github.com/nalmeida/oh-yeah-countdown">Oh Yeah Countdown source code.</a>
+		</div>
 	</div>
 
 	<script type="text/javascript">
