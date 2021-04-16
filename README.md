@@ -20,13 +20,13 @@ Just click the **Start** button and then quickly hit the **Play** on the audio.
 
 The timer is preset to 3 min and 8 seconds, the "duration" of the `oh-yeah.mp3` theme song.
 
-If you need / want to change the duration or the theme song, just config it on [Big Timer website](https://www.bigtimer.net/), copy the URL and replace the `iframe src` in the index code.
+If you need / want to change the duration or the theme song, just config it on [Big Timer website](https://www.bigtimer.net/), copy the URL and replace the `iframe src` in the `index.html` code.
 
 To change the `mp3` file, save the file in the same folder as the `index.html` file and change the `audio src`.
 
-If you only want the visual countdown, forget this project and go straight to [Big Timer website](https://www.bigtimer.net/)
+If you only want the visual countdown, forget this project and go straight to [Big Timer website](https://www.bigtimer.net/)!
 
-The **Your local notes...** space is a "edit in place" `div` for you to add some notes. It saves the content in the browser `local storage`.
+The **Your local notes...** space is an "edit in place" `div` for you to add some notes. It saves the content in the browser `local storage`.
 
 ----
 
