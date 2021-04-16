@@ -12,6 +12,8 @@ python -m http.server
 
 ## Using it
 
+👉 [https://oh-yeah-countdown.netlify.app](https://oh-yeah-countdown.netlify.app)
+
 Just click the **Start** button and then quickly hit the **Play** on the audio.
 
 ## How to customize it
@@ -26,3 +28,6 @@ If you only want the visual countdown, forget this project and go straight to [B
 
 The **Your local notes...** space is a "edit in place" `div` for you to add some notes. It saves the content in the browser `local storage`.
 
+----
+
+Kindly hosted by Netlify [![Netlify Status](https://api.netlify.com/api/v1/badges/a77163f9-e257-4c27-83d1-a9a7298d4d45/deploy-status)](https://app.netlify.com/sites/oh-yeah-countdown/deploys)
